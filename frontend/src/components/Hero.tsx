@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const AnimatedSphere = () => {
-  const meshRef = useRef<any>();
+  const meshRef = useRef<any>(null);
 
   useFrame((state) => {
     if (meshRef.current) {
@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <h3>💪 Premium Quality</h3>
+          <h3>Premium Quality</h3>
           <p>Lab-tested ingredients</p>
         </motion.div>
         <motion.div
@@ -96,7 +96,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.6 }}
         >
-          <h3>🚀 Fast Results</h3>
+          <h3>Fast Results</h3>
           <p>See changes in weeks</p>
         </motion.div>
         <motion.div
@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
         >
-          <h3>🌿 Natural Formula</h3>
+          <h3>Natural Formula</h3>
           <p>No artificial additives</p>
         </motion.div>
       </div>
