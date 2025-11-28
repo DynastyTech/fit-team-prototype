@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitTeam</title>
+    <script>
+      // GitHub Pages SPA redirect for client-side routing
+      // This ensures all routes work when accessed directly
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      var path = l.pathname;
+      
+      // If we're at /fit-team-prototype/ or /fit-team-prototype, redirect to index.html
+      if (path === '/fit-team-prototype/' || path === '/fit-team-prototype') {
+        window.location.replace('/fit-team-prototype/index.html');
+      } else {
+        // For other paths, use the SPA redirect pattern
+        var redirect = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+          '/fit-team-prototype/' +
+          '?/' +
+          path.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash;
+        window.location.replace(redirect);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
+
