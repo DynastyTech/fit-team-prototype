@@ -1,0 +1,108 @@
+.order-success-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.success-content {
+  text-align: center;
+  max-width: 700px;
+  background-color: var(--surface);
+  padding: 4rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.success-icon {
+  color: #28a745;
+  margin-bottom: 2rem;
+}
+
+.success-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.order-number {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-family: monospace;
+}
+
+.success-message {
+  background-color: var(--background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.success-message p {
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.next-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.step {
+  padding: 1.5rem;
+  background-color: var(--background);
+  border-radius: 12px;
+}
+
+.step svg {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .success-content {
+    padding: 3rem 2rem;
+  }
+
+  .success-content h1 {
+    font-size: 2rem;
+  }
+
+  .next-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    width: 100%;
+  }
+}
+
