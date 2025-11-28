@@ -42,4 +42,5 @@ jobs:
         publish_dir: ./frontend/dist
         cname: ${{ secrets.CUSTOM_DOMAIN }}
         force_orphan: true
+        keep_files: false
 
