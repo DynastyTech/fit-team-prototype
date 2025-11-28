@@ -19,6 +19,7 @@ app.use(cors({
   origin: [
     'https://hackerwithdrip.github.io',
     'https://hackerwithdrip.github.io/fit-team-prototype',
+    'https://hackerwithdrip.github.io/fit-team-prototype/',
     'http://localhost:5173',
     'http://localhost:3000',
     'http://localhost:5174',
